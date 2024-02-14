@@ -83,7 +83,6 @@ def solve(start_state, end_state):
     explored = set()
     
     while True:
-        print('Hello')
         if frontier.empty():
             return None
         
@@ -102,7 +101,6 @@ def solve(start_state, end_state):
         for state in possible_moves(node.state):
             state_tuple = tuple(map(tuple, state))
             if not frontier.contains_state(state) and state_tuple not in explored:
-                print('hi')
                 child = Node(state=state, parent=node)
                 frontier.add(child)
 
@@ -120,4 +118,3 @@ else:
             print(j)
         print()
     print("Goal State Reached!!!!\n")
-    
