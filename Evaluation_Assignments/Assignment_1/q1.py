@@ -41,5 +41,28 @@ end = time.process_time()
 print("\nTime taken to Multiply Matrices", (end - start) * 10**3, "ms.")
 
 
+start = time.process_time()
+try:
+    transpose_matrixA = np.transpose(matrixA)
+    transpose_matrixB = np.transpose(matrixB)
+except:
+    raise Exception("Cannot Transpose Matrix")
+else:
+    print("\nTranspose of  Matrix A is:\n",transpose_matrixA,"\n")
+    print("Transpose of Matrix B is:\n",transpose_matrixB,"\n")
+end = time.process_time()
+print("Time taken to tanspose Matrices", (end - start) * 10**3, "ms.")
+
+start = time.process_time()
+try:
+    product_transpose = np.dot(transpose_matrixA, transpose_matrixB)
+except:
+    raise Exception("Error Multiplying the Matrices")
+else:
+    print("\nProduct of Transpose:\n",product_transpose)
+end = time.process_time()
+print("\nTime taken to Multiply Matrices", (end - start) * 10**3, "ms.")
+
+
 
 

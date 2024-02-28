@@ -76,9 +76,9 @@ initial_state = [
 ]
 
 goal_state = [
-    [3,8,1],
-    [2,4,0],
-    [6,7,5]
+    [1,2,3],
+    [8,4,0],
+    [7,6,5]
 ]
 
 bfs(initial_state, goal_state)
